@@ -13,6 +13,15 @@ display的值为table-cell, table-caption, inline-block中的任何一个。
 
 那BFC一般有什么用呢？比如常见的多栏布局，结合块级别元素浮动，里面的元素则是在一个相对隔离的环境里运行。
 
+BFC布局规则：
+
+1.内部的Box会在垂直方向，一个接一个地放置。
+2.Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠
+3.每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+4.BFC的区域不会与float box重叠。
+5.BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
+6.计算BFC的高度时，浮动元素也参与计算
+
 IFC
 
 IFC(Inline Formatting Contexts)直译为"内联格式化上下文"，IFC的line box（线框）高度由其包含行内元素中最高的实际高度计算而来（不受到竖直方向的padding/margin影响)
